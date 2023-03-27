@@ -5,7 +5,7 @@ const {logger}=require("../logger/logger")
 const {client}=require("../redis/redis");
 const {limiter}=require("../limiter")
 const {hismodel}=require("../model/hitory")
-wroute.get("/city",limiter,async(req,response)=>{
+wroute.get("/city",async(req,response)=>{
 
     try {
       let flag=await client.hExists("data",req.body.city ) 
